@@ -1,0 +1,7 @@
+.metals/
+.idea/
+.vscode/
+/project
+/bazel-*
+.bazelbsp/
+.bsp/
