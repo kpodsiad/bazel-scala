@@ -1,0 +1,1 @@
+Run `bazel run //:App` from root directory
