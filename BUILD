@@ -1,8 +1,9 @@
-load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary", "scala_library")
 scala_binary(
     name = "App",
     srcs = glob(["src/main/scala/me/kpodsiad/*.scala"]),
-    main_class = "me.kpodsiad.Main"
+    main_class = "me.kpodsiad.Main",
+    scalacopts = ["-Xplugin:./semanticdb-scalac_2.13.3-4.4.29.jar", "-Yrangepos"]
 )
 
 load("@io_bazel_rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")
