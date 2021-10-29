@@ -3,7 +3,7 @@ scala_binary(
     name = "App",
     srcs = glob(["src/main/scala/me/kpodsiad/*.scala"]),
     main_class = "me.kpodsiad.Main",
-    scalacopts = ["-Xplugin:./semanticdb-scalac_2.13.3-4.4.29.jar", "-Yrangepos"]
+    scalacopts = ["-Xplugin:./semanticdb-scalac_2.13.3-4.4.29.jar", "-Yrangepos", "-P:semanticdb:targetroot:src/target"]
 )
 
 load("@io_bazel_rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")

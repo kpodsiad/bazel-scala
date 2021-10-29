@@ -5,3 +5,4 @@
 /bazel-*
 .bazelbsp/
 .bsp/
+*/target/
